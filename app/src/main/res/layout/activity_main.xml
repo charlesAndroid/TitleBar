@@ -10,7 +10,7 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        app:right_text="test"
-        app:title="home" />
+        app:right_text="sign in"
+        app:title_text="Home" />
 
 </LinearLayout>

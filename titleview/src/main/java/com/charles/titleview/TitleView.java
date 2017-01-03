@@ -53,7 +53,7 @@ public class TitleView extends RelativeLayout {
                     R.styleable.TitleView, defStyleAttr, 0);
             mBackgroudColor = a.getColor(R.styleable.TitleView_title_background, DEFAULT_BACKGROUND_COLOR);
             mTitleColor = a.getColor(R.styleable.TitleView_title_color, DEFAULT_TITLE_COLOR);
-            mTitle = a.getString(R.styleable.TitleView_title);
+            mTitle = a.getString(R.styleable.TitleView_title_text);
             mBackButton = a.getBoolean(R.styleable.TitleView_back_button, DEFAULT_BACK_BUTTON);
             mRightText = a.getString(R.styleable.TitleView_right_text);
 
