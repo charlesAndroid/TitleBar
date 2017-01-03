@@ -1,4 +1,4 @@
-package com.charles.titleview;
+package com.charles.titlebar;
 
 import org.junit.Test;
 

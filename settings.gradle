@@ -1,1 +1,1 @@
-include ':app', ':titleview'
+include ':app', ':titlebar'

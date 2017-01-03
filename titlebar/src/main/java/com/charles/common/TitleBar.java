@@ -1,4 +1,4 @@
-package com.charles.titleview;
+package com.charles.common;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,14 +10,16 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.charles.titlebar.R;
+
 
 /**
- * com.charles.titleview.TitleView
+ * com.charles.common.TitleBar
  *
  * @author Just.T
  * @since 16/12/29
  */
-public class TitleView extends RelativeLayout {
+public class TitleBar extends RelativeLayout {
     private int mBackgroudColor;
     private int mTitleColor;
     private String mTitle;
@@ -34,28 +36,28 @@ public class TitleView extends RelativeLayout {
     private onBackListener mListener;
 
 
-    public TitleView(Context context) {
+    public TitleBar(Context context) {
         this(context, null);
     }
 
-    public TitleView(Context context, AttributeSet attrs) {
+    public TitleBar(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public TitleView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TitleBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         if (context instanceof Activity) {
             this.context = (Activity) context;
         }
-        View inflate = LayoutInflater.from(context).inflate(R.layout.titleview, this, true);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.titlebar, this, true);
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs,
-                    R.styleable.TitleView, defStyleAttr, 0);
-            mBackgroudColor = a.getColor(R.styleable.TitleView_title_background, DEFAULT_BACKGROUND_COLOR);
-            mTitleColor = a.getColor(R.styleable.TitleView_title_color, DEFAULT_TITLE_COLOR);
-            mTitle = a.getString(R.styleable.TitleView_title_text);
-            mBackButton = a.getBoolean(R.styleable.TitleView_back_button, DEFAULT_BACK_BUTTON);
-            mRightText = a.getString(R.styleable.TitleView_right_text);
+                    R.styleable.TitleBar, defStyleAttr, 0);
+            mBackgroudColor = a.getColor(R.styleable.TitleBar_title_background, DEFAULT_BACKGROUND_COLOR);
+            mTitleColor = a.getColor(R.styleable.TitleBar_title_color, DEFAULT_TITLE_COLOR);
+            mTitle = a.getString(R.styleable.TitleBar_title_text);
+            mBackButton = a.getBoolean(R.styleable.TitleBar_back_button, DEFAULT_BACK_BUTTON);
+            mRightText = a.getString(R.styleable.TitleBar_right_text);
 
         } else {
             mBackgroudColor = DEFAULT_BACKGROUND_COLOR;
