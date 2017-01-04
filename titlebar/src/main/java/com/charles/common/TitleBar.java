@@ -167,7 +167,7 @@ public class TitleBar extends RelativeLayout {
      * @param listener
      */
     public void setRightTextClickListener(OnClickListener listener) {
-        if (mRightText.length() > 0)
+        if (mRightText != null && mRightText.length() > 0)
             tv_right_text.setOnClickListener(listener);
     }
 
